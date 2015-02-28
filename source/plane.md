@@ -5,7 +5,7 @@ primary_navigation: true
 
 # Plane
 
-A plane is a plane on the x-y axis, it's depth in the z dimension is 0. It inherits from [Element](/element.html). If you want a horizontal plane, rotate your plane by approximately `-1.5708` radians on the y axis as in the following example.
+A plane is a plane on the x-y axis, it's depth in the z dimension is 0. It inherits from [Element](/element.html). If you want a horizontal plane, rotate your plane by approximately `-1.5708` radians on the y axis as in the following example. Planes are finite, they will only be as large as the specified scale in the x and y dimensions.
 
 ## Sample XML
 
