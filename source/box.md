@@ -28,3 +28,19 @@ document.getElementsByTagName("box").forEach(function(box){
     box.style.color = '#ff0000';
 });
 ```
+
+### texture-map
+
+A texture map that is applied to the box. Texture-maps are lambertian shaded.
+
+```
+style="texture-map: url(/images/crate.png)"`
+```
+
+### texture-repeat
+
+How many times is the texture repeated in the U and V directions.
+
+```
+style="texture-map: url(/images/grid.png); texture-repeat: 100 100"
+```

@@ -41,3 +41,9 @@ Use a value of `url(something.png)` to specify the lightmap for this model. Curr
 ### texture-map
 
 Use a value of `url(something.png)` to specify the texturemap for this model. Texturemaps are lambertian shaded. If your texturemap doesnt seem to be shaded according to the lights in your scene, make sure you checked 'export normals' when saving your .obj file from your modelling program.
+
+### collision
+
+If you want people to be able to walk around *inside* or *through* your model, set `collision:none`. If you want people to collide with a axis-aligned bounding box around your model - set `collision:bounding-box` (that is the default).
+
+Note that scenevr cannot currently collide with the mesh data in a model, so currently if you want to have people walk around a level, you have to use boxes with `visibility:hidden` to describe the collision model.
