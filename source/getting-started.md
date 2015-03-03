@@ -20,11 +20,11 @@ This will take a little while while the npm dependencies are downloaded. The `sc
 
 Download the sample scenes.
 
-    git clone git://github.com/bnolan/scenevr
+    git clone https://github.com/scenevr/samples
 
 Start the server:
 
-    scenevr ./scenes/
+    scenevr ./samples/
 
 ## Launch the webclient
 
