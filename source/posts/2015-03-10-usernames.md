@@ -14,7 +14,7 @@ I've been thinking about authentication for scenevr for a long time. Initially I
 
 ## Anonymity
 
-I like [this post](https://highfidelity.com/blog/2014/03/identity-in-the-metaverse/) by high fidelity. Basically, you shouldn't be forced to display your username while you wander around the metaverse. Sure, in the [homeroom](//client.scenevr.com/) it's cool to have your name. But maybe if you're visiting /r/gentlemanboners, you're not so keen on everyone seeing you wander around the gallery.
+I like [this post](https://highfidelity.com/blog/2014/03/identity-in-the-metaverse/) by high fidelity. Basically, you shouldn't be forced to display your username while you wander around scenes. Sure, in the [homeroom](//client.scenevr.com/) it's cool to have your name. But maybe if you're visiting /r/gentlemanboners, you're not so keen on everyone seeing you wander around the gallery.
 
 That's why anonymity is built in to scenevr. You aren't required to log in to access scenes, and you can transition from authenticated (with a name over your avatar) to anonymous at any time, without leaving the room.
 
