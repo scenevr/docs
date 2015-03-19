@@ -13,6 +13,16 @@ An Element is the base class for 3d objects in the scene. You can't instantiate 
 <box id="cubey" position="1 2 3" rotation="1.570 0 0" />
 ```
 
+## Styles
+
+### collision
+
+Can be `none` in which case this element has no physics representation. This is best for performance, but you can walk through stuff. Can be `bounding-box` (the default) for a square box physics representation around your object. For `<model />` elements, you can set `collision: mesh` to collide to the individual triangles in the mesh. Use this sparingly as it's super slow. The homeroom uses this to collide you with the walls.
+
+### collision-response
+
+Set to `true` (the default) to make the player collide and bounce off an object. Set to `false` to detect a collison (triggers a `collide` event on the server), but the plyaer can still walk through the object. Good for when the player walks through a power up, or for making an invisible detection box.
+
 ## Attributes
 
 ### id
