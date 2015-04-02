@@ -35,6 +35,12 @@ Open the webclient and load the files served from your localhost:
 
 &raquo; Open [client.scenevr.com](http://client.scenevr.com/?connect=localhost:8080/index.xml) for local files
 
+## Edit the scene files
+
+Open any of the scene files in your editor and make changes. 
+
+Whenever you save the file in your editor, the `scenevr` app **detects that the file has changed and reloads the scene** in your browser. The scene files have an `.xml` extension, but if your editor supports it, you should set your editor to html mode, since the scene file format is more like html. 
+
 ## Host your finished scenes
 
 Once you have your scenes working well locally, host them for everyone to see at:
