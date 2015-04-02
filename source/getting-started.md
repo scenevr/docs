@@ -18,13 +18,16 @@ This will take a little while while the npm dependencies are downloaded. The `sc
 
 ## Download sample scenes
 
-Download the sample scenes.
+[Download the sample scenes](https://github.com/scenevr/samples/archive/master.zip).
 
-    git clone https://github.com/scenevr/samples
+Unzip the sample scenes.
+
+    cd / 
+    unzip samples-master.zip 
 
 Start the server:
 
-    scenevr ./samples/
+    scenevr ./samples-master/
 
 ## Launch the webclient
 
