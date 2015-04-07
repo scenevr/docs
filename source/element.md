@@ -101,7 +101,7 @@ The event object will include a `point` attribute which is the vector at which t
 Fired when the user collides with an element. Collide events are only sent when a user touches a new element, or jumps in the air and touches an element again. Walking across an element will not trigger multiple collide events. If an elements physical attributes changes (rotation, scale, position, geometry), the collide event may be re-triggered for this element. Collide events are throttled so that moving elements can't cause 60 collision events per second sent to the server. Will never fire on elements that have their style set as `collision:none`. The event object that is passed in contains an `player` attribute and a `normal` attribute that is the vector of the collision normal, in the direction of the player to the element that it collided with.
 
 ```javascript
-document.getElementById("cubey").addEventListener("click", function(e){
+document.getElementById("cubey").addEventListener("collide", function(e){
     console.log("Respawning the player because they touched cubey");
     e.player.respawn("you touched cubey");
 });
