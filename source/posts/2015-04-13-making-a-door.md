@@ -8,6 +8,10 @@ I just put up a [gist of making a door](https://gist.github.com/bnolan/a740dccdd
 
 <img src="https://pbs.twimg.com/media/CCbX14DUAAAoaBX.png" class="screenshot" />
 
+Then you need to add a `click` event handler to the door. We store the state of whether the door is opened or closed by using a css class. This doesn't actually have any effect on the display of the door, it's just a handy place to store some state.
+
+Now, we could have the door open instantly, but its cooler if we take 1 second (1000 milliseconds) for the door to animate open. To do this, we use the `animate` method in SceneQuery. Note that at the moment you can only animate position and rotation. So we work out the state the door needs to move to, then animate the door. And boom! You have an animated dooor.
+
 ```html
 <scene>
  
@@ -48,6 +52,3 @@ I just put up a [gist of making a door](https://gist.github.com/bnolan/a740dccdd
 </scene>
 ```
 
-Then you need to add a `click` event handler to the door. We store the state of whether the door is opened or closed by using a css class. This doesn't actually have any effect on the display of the door, it's just a handy place to store some state.
-
-Now, we could have the door open instantly, but its cooler if we take 1 second (1000 milliseconds) for the door to animate open. To do this, we use the `animate` method in SceneQuery. Note that at the moment you can only animate position and rotation. So we work out the state the door needs to move to, then animate the door. And boom! You have an animated dooor.
