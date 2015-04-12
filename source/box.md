@@ -31,7 +31,7 @@ document.getElementsByTagName("box").forEach(function(box){
 
 ### texture-map
 
-A texture map that is applied to the box. Texture-maps are lambertian shaded.
+A texture map that is applied to the box. Texture-maps are lambertian shaded. Textures should be sized as a power of 2 (eg 256x256, 512x512).
 
 ```
 style="texture-map: url(/images/crate.png)"`
