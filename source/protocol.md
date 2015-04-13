@@ -13,7 +13,7 @@ A SceneVR client connects to the server over websockets. As soon as a client con
 
 ## Websockets
 
-To connect to a scene, connect to the url specified in the connect bar, with a websocket connection on port 8080. So for example this url:
+To connect to a scene, connect to the url specified in the location bar, with a websocket connection on port 8080. So for example this url:
 
     http://client.scenevr.com/?connect=chess.scenevr.hosting/chess.xml
 
@@ -51,7 +51,7 @@ The CData is used so that the clients don't have to decode html inside `<billboa
 
 ## Create / update / delete
 
-The server does not maintain a list of what elements the client has scene, but instead sends all changing elements to the client, whenever an element changes. So for example - the teapot in the [homeroom](http://client.scenevr.com/) has a `setInterval` that continuously rotates the teapot. This means that the `rotation` attribute of the `<model />` is constantly changing. That means that at 10hz (the current update frequency), the element is sent to all connected clients.
+The server does not maintain a list of what elements the client has seen, but instead sends all changing elements to the client, whenever an element changes. So for example - the teapot in the [homeroom](http://client.scenevr.com/) has a `setInterval` that continuously rotates the teapot. This means that the `rotation` attribute of the `<model />` is constantly changing. That means that at 10hz (the current update frequency), the element is sent to all connected clients.
 
 To process a packet, the client parses the packet, then for each child element, looks up first:
 
@@ -61,7 +61,7 @@ To process a packet, the client parses the packet, then for each child element, 
 <box uuid="7334d64b-3989-4ca5-bbc1-f05bc6704e6e" id="home" style="color: #555555" position="2.5 0.25 3.5" rotation="0 0 0" scale="1 0.5 1"></box>
 ```
 
-If we look up the UUID and find this uuid in our local scenegraph, we need to make a decision. Have only the position and rotation of the element changed? If so, just interpolate the previous position and rotation to the new position and rotation (do the interpolation over the network timestep, currently 10hz, but in the future this will be server-definable).
+If we look up the UUID and find this uuid in our local scenegraph, we need to make a decision. Have only the position and rotation of the element changed? If so, just interpolate the previous position and rotation to the new position and rotation (do the interpolation over the network timestep, currently 100ms, but in the future this will be server-definable).
 
 To tell if only the position and rotation changed, you need to keep a copy of the parsed XML from when you created the object in your scenegraph. You can use a userData for this. For example (pseudocode):
 
@@ -75,7 +75,7 @@ box.userData = packet;
 
 In this pseudocode, we can then do a test when we recieve a new packet. If only the `position` and `rotation` attribute have changed, then we can interpolate the existing element. If the style attribute has changed, then we need to destroy and regenerate the element, to apply the new styles.
 
-The if_substantial_change then destroy_and_regenerate is a very naive way to make sure that the scenegraph reflects the current server state of an element, but it is the easiest way to get started. Feel free to optimise this step as you see fit.
+The `if_substantial_change` then `destroy_and_regenerate` is a very naive way to make sure that the scenegraph reflects the current server state of an element, but it is the easiest way to get started. Feel free to optimise this step as you see fit.
 
 ### Is it an element we haven't seen before?
 
@@ -85,7 +85,7 @@ The if_substantial_change then destroy_and_regenerate is a very naive way to mak
 
 Using the uuid attribute, we look up to see if we have this element in our local scenegraph. If we don't, then we create the element and add it to our scenegraph with the uuid attribute so that we can look it up in the future. The attributes of an element are parsed as per their description in the relevent API docs on scenevr.com. 
 
-*The wire serialization of elements is identical to the markup used to define a scene*. The only addition it the uuid which is only used for wire serialization.
+*The wire serialization of elements is identical to the markup used to define a scene*. The only addition is the uuid which is only used for wire serialization.
 
 ### Is it a `<dead />`?
 
