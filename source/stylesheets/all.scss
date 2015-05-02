@@ -19,10 +19,10 @@ body {
 
 h1,h2,h3,h4,h5{
   font-family: 'helvetica neue', sans-serif;
-  font-weight: 200;
-  color: #fff;
+  font-weight: 400;
+  color: #eee;
   margin: 1.2em 0;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 }
 
 a{
@@ -55,7 +55,7 @@ header{
     color: #f70;
     text-shadow: 0 0 2px darken(#f70, 20%);
     padding: 5px;
-    font-size: 18px;
+    font-size: 14px;
     text-decoration: none;
     margin-right: 5px;
   }
@@ -91,19 +91,17 @@ h1{
 
 h2{
   font-size: 1.5em;
-  color: #eee
+  color: white;
 }
 
 h3{
-  font-size: 1.0em;
-  font-weight: bold;
-  color: #ccc;
+  font-size: 1.2em;
+  color: white;
 }
 
 h4{
   font-size: 1.0em;
-  font-weight: normal;
-  color: #ccc;
+  color: white;
 }
 
 .wrapper{
@@ -113,7 +111,7 @@ h4{
   min-height: 640px;
   border-radius: 2px;
   background: #222;
-  color: #aaa;
+  color: #bbb;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
   margin: 0 auto 40px auto;
   padding: 0 20px;

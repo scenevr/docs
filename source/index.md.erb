@@ -62,12 +62,11 @@ Create Virtual Reality scenes with html, css and javascript.
 
 # News
 
+<uL>
 <% page_articles.each_with_index do |article, i| %>
-  <div class="news-summary">
-    <h2><%= link_to article.title, article %> <small><%= article.date.strftime('%b %e') %></small></h2>
-    <%= article.summary(250) %>
-  </div>
+  <li><%= link_to article.title, article %> <small><%= article.date.strftime('%b %e') %></small></li>
 <% end %>
+</ul>
 
 ## Our Goal
 

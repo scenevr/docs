@@ -6,35 +6,17 @@ position: 5
 
 # Roadmap
 
-Subject to change. This is the current plan for scenevr.
-
-### Authentication
-
-Create an authentication service so players can claim their names and servers can trust they are the player they say.
-
 ### Avatar customisation
 
-Allow users to set girth, height and color of avatars. Make a visual face configuration tool for choosing a face. Render a face on the avatars.
+Allow users to set girth, height and color of avatars. Make a scene for choosing a face. Render a face on the avatars.
 
 ### Friend list
 
 Keep a list of your friends, be able to message them in game (voice message or text chat), and teleport to their location.
 
-### Unity client
-
-Investigate porting the web client to unity (c#), and measure the performance advantages. This is particularly with a goal to having a highly performant mobile client. Investigate opensource licenses that can be used with Unity projects and plugins. Find out how to render to texture for each platform (for the billboards).
-
-### Gear VR
-
-Try using the chrome webview, or the unity client, to create a gear vr + bluetooth controller mobile interface for SceneVR.
-
 ### Google Cardboard
 
 Use the hmd polyfill to support google cardboard. Investigate navigation techniques that will work with the one bit 'magnet' input system. Probably look at the ground and click to teleport.
-
-### WebRTC audio
-
-Use web rtc audio with positional webaudio to create push-to-talk voice chat in the browser.
 
 ### Physics on the server
 
@@ -54,17 +36,9 @@ Create a group element for nesting transforms, allows things like:
 
 As per the npm philosophy, break the server into several smaller modules, so that people can re use the scenegraph/dom code for other purposes and projects.
 
-### Hosting
-
-Create a hosting server that allows people to easily serve SceneVR scenes. Have some error handling (or provide integration with raygun.io) for reporting errors that occur in the scene.
-
 ### Persistence
 
 Investigate and expose a persistence method for scenes, something like localStorage, or webSQL. Possibly use redis for this?
-
-### Blender exporter
-
-Take the existing blender export code and make it work well, generating entire scene files with collision meshes and seperate .obj objects, keeps existing blender object names and converts them into `id` attribute.
 
 ### Support convexpolyhedra collision meshes
 
@@ -77,6 +51,27 @@ Allow spheres, potentially with `subdivision` count as an attribute.
 ### Add \<light /\> element
 
 Allow point lights and ambient light to be set as an element.
+
+## Previous goals
+
+These are things that used to be on the list but are on the back burner for now.
+
+### Unity client
+
+Investigate porting the web client to unity (c#), and measure the performance advantages. This is particularly with a goal to having a highly performant mobile client. Investigate opensource licenses that can be used with Unity projects and plugins. Find out how to render to texture for each platform (for the billboards).
+
+### Gear VR
+
+Try using the chrome webview, or the unity client, to create a gear vr + bluetooth controller mobile interface for SceneVR.
+
+### Hosting
+
+Create a hosting server that allows people to easily serve SceneVR scenes. Have some error handling (or provide integration with raygun.io) for reporting errors that occur in the scene.
+
+### Blender exporter
+
+Take the existing blender export code and make it work well, generating entire scene files with collision meshes and seperate .obj objects, keeps existing blender object names and converts them into `id` attribute.
+
 
 ## Performance
 
