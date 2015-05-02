@@ -8,6 +8,42 @@ per_page: 10
 
 # SceneVR
 
+Create Virtual Reality scenes with html, css and javascript.
+
+<div class="banner">
+    <ul>
+        <li>
+          <img src="/images/slider-puckman.jpg" />
+          <cite>Create <a href="/player.html">multiplayer games</a> that use existing Javascript libraries</cite>
+        </li>
+        <li>
+          <img src="/images/slider-janusvr.jpg" />
+          <cite>Connect to Scene using <a href="http://janusvr.com/">Janus VR</a> for a modern, native, high performance renderer</cite>
+        </li>
+        <li>
+          <img src="/images/slider-homeroom.jpg" />
+          <cite>Use <a href="/model.html">3d models</a> from blender, sketchup, maya, 3dsmax and more</cite>
+        </li>
+        <li>
+          <img src="/images/slider-gallery.jpg" />
+          <cite>Load content from the internet using jQuery</cite>
+        </li>
+        <li>
+          <img src="/images/slider-chess.jpg" />
+          <cite>Edit your scenes in realtime and see your changes instantly</cite>
+        </li>
+    </ul>
+</div>
+
+<script>
+  $(function() {
+      $('.banner').unslider({
+        dots: true,
+        delay: 4000
+      });
+  });
+</script>
+
 <dl>
   <dt>Try now!</dt>
   <dd class="try-now"><a href="http://client.scenevr.com">client.scenevr.com</a></dd>
@@ -23,17 +59,6 @@ per_page: 10
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </dd>
 </dl>
-
-# SceneVR - Come build a virtual world
-
-<img src="/images/apartment.png" class="screenshot" />
-
-<p>
-  Scene is a world made by it's users. At first, you can
-  just explore and play game with your friends, but as you
-  progress, you can start changing and creating parts of the
-  world yourself.
-</p>
 
 # News
 
@@ -153,6 +178,10 @@ There are another two projects that use similair markup to SceneVR, [JanusVR](//
 
 # Features
 
+## Rift support
+
+[JanusVR](//janusvr.com/) is a fully featured 3d web browser that supports SceneVR. It has excellent oculus rift support. Develop your content in the web client, then launch Janus to experience your scene in the rift!
+
 ## Multi-user
 
 Your SceneVR scene is multi-user from the get go. Just share the URL to your scene and your friends can join you. Each user is represented by a peg-man character. When a user interacts with the scene (by clicking a button for example), everyone sees the change that happens to the scene. You can use this to write **multi-user games** using just xml and javascript.
@@ -180,15 +209,3 @@ Use the model tag (`<model src="/models/cat.obj" />`) to import obj models from 
 ## Physics simulation
 
 We use [cannon.js](http://cannonjs.org/) so do collision detection on the client, so you can create platform games where you jump from box to box. We have a blender plugin under development to export collision models from that tool.
-
-# Under development
-
-SceneVR is still under heavy development, and some of these features are only available on branches of the scenevr-web client. Feel free to try them out and log issues and help contribute to development!
-
-## Oculus Rift support
-
-If you use a webVR browser ([firefox](http://mozvr.com/downloads.html) or [chrome](http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html)), you can use the oculus rift to experience the scenes in VR. Hit `F11` for fullscreen, and `R` to reset your viewport.
-
-## Portals
-
-When you click a link to the next scene, a portal opens and shows you the next scene. Just walk through the portal to visit the next scene.
