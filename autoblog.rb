@@ -25,5 +25,7 @@ json['data']['children'].each do |child|
   next if File.exists?('source/posts/' + slug)
 
   File.open('source/posts/' + slug, 'w') { |f| f.write(post) }
+
+  puts slug
 end
 
