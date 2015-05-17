@@ -12,7 +12,7 @@ json['data']['children'].each do |child|
   next unless child['author'] == 'captainbenis'
 
   date = DateTime.strptime(child['created'].to_s,'%s').strftime('%Y-%m-%d')
-  title = child['title']
+  title = child['title'].gsub(/:/,' ')
 
   slug = date + '-' + title.downcase.gsub(/[^a-z]+/,'-').slice(0,50).sub(/^-+/,'').sub(/-+$/,'') + '.md'
 
