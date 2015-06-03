@@ -1,6 +1,6 @@
 ---
 title: SceneQuery
-primary_navigation: true
+primary_navigation: false
 ---
 
 # SceneQuery
