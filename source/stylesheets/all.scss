@@ -160,6 +160,7 @@ h4{
 section.content{
   margin: 20px 0 0 140px;
   padding: 1px 0;
+  min-height: 800px;
 
   iframe{
     max-width: 100%;
@@ -339,4 +340,46 @@ dl{
     background: #fff;
     opacity: 1;
   }
+}
+
+
+.enter-destination{
+  box-shadow: 3px 3px 5px black;
+  border: 2px solid #888;
+  border-radius: 4px;
+  background: linear-gradient(#222, #333);
+  padding: 0 20px 20px 20px;
+  margin: 40px 20px;
+
+  div{
+    font-size: 2em;
+
+    input, button{
+      font: inherit;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    button{
+      background: #f70;
+      font-size: 0.8em;
+      padding: 0 10px;
+      border: none;
+      border-top: 1px solid lighten(#f70, 20%);
+      border-left: 1px solid lighten(#f70, 20%);
+      border-right: 1px solid darken(#f70, 20%);
+      border-bottom: 1px solid darken(#f70, 20%);
+    }
+
+    button:hover{
+      background: lighten(#f70, 10%);
+    }
+  }
+}
+
+cite{
+  display: block;
+  font-style: normal;
+  color: #888;
+  margin-left: 10px;
 }
