@@ -33,7 +33,7 @@ Start the server:
 
 Open the webclient and load the files served from your localhost:
 
-&raquo; Open [client.scenevr.com](http://client.scenevr.com/?connect=localhost:8080/index.xml) for local files
+&raquo; Open [client.scenevr.com](http://client.scenevr.com/?connect=localhost:8080/hello.xml) for local files
 
 ## Edit the scene files
 
