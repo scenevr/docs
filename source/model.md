@@ -30,6 +30,10 @@ Models should be correctly world sized (1 unit = 1 metre), using the OpenGL coor
 
 The src of the model. The src should be an absolute path, that is relative to the root directory of the scene server.
 
+### mtl
+
+The material file of the model. `.mtl` files will not be loaded unless this attribute is specified. The path to the `mtl` file should be relative. Textures should be exported as a relative path also.
+
 ## Styles
 
 ### light-map
