@@ -34,6 +34,15 @@ The src of the model. The src should be an absolute path, that is relative to th
 
 The material file of the model. `.mtl` files will not be loaded unless this attribute is specified. The path to the `mtl` file should be relative. Textures should be exported as a relative path also.
 
+```xml
+<model 
+  position="1 2 3" 
+  src="/models/spongebob.obj" 
+  mtl="/models/spongebob.mtl" />
+```
+
+There is another example of mtl use [here](https://github.com/scenevr/home/blob/master/home.xml#L64).
+
 ## Styles
 
 ### light-map
