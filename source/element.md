@@ -94,7 +94,7 @@ document.getElementById("cubey").addEventListener("click", function(e){
 });
 ```
 
-The event object will include a `point` attribute which is the vector at which the player clicked on the object.
+The event object will include a `point` attribute which is the vector at which the player clicked on the object. It also has a `direction` attribute which is the direction of the ray cast out from the user to hit the element.
 
 ### collide
 
