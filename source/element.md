@@ -94,7 +94,7 @@ document.getElementById("cubey").addEventListener("click", function(e){
 });
 ```
 
-The event object will include a `point` attribute which is the vector at which the player clicked on the object. It also has a `direction` attribute which is the direction of the ray cast out from the user to hit the element.
+The event object will include a `point` attribute which is the vector at which the player clicked on the object. It also has a `direction` attribute which is the direction of the ray cast out from the user to hit the element. It also has a `normal` attribute which is the normal of the face that was clicked. Finally, the `button` attribute maps to the [button mouseevent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button).
 
 ### collide
 
