@@ -11,25 +11,23 @@ html,body{
 }
 
 body {
-  background: #111;
+  background: #fff;
   font-family: sans-serif;
   font-size: 0.9em;
   color: #555;
 }
 
-h1,h2,h3,h4,h5{
-  font-family: 'helvetica neue', sans-serif;
-  font-weight: 400;
-  color: #eee;
-  margin: 1.2em 0;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+h1,h2,h3,h4,h5,h5{
+  font-family: 'HelveticaNeue-CondensedBold', 'helvetica neue', sans-serif;
+  color: #444;
+  margin: 0 0 24px 0;
 }
 
 a{
-  color: $orange;
+  color: #333;
 
   &:hover{
-    color: lighten($orange, 20%);
+    background: $orange;
   }
 }
 
@@ -40,39 +38,43 @@ a{
 img.screenshot{
   margin-left: 10px;
   border-radius: 2px;
-  box-shadow: 1px 1px 3px black;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
   max-width: 95%;
 }
 
 header{
-  background: linear-gradient(darken(#333, 5%), #333);
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  padding-left: 20px;
+  background: #fafafa;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+  padding: 10px 20px;
+  margin: 0;
 
   a{
-    background: #222;
+    background: $orange;
     border-radius: 3px;
-    color: #f70;
-    text-shadow: 0 0 2px darken(#f70, 20%);
+    color: black;
     padding: 5px;
     font-size: 14px;
     text-decoration: none;
     margin-right: 5px;
+    margin-left: 20px;
+  }
+
+  a:hover{
+    color: white;
   }
 
   h3{
-    color: white;
-    text-shadow: 1px 1px 1px black;
     margin: 0 auto;
     max-width: $width;
     padding: 10px 0;
     font-size: 14px;
     font-weight: normal;
+    font-family: inherit;
   }
 }
 
 code{
-  color: #f70;
+  color: #333;
   font-family: Monaco, monospace;
   font-size: 0.9em;
 }
@@ -81,8 +83,9 @@ pre{
   font-size: 0.9em;
   margin: 10px 10px 10px 10px;
   padding: 10px;
-  background: #181818;
+  background: #ddd;
   border-radius: $radius;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
 }
 
 h1{
@@ -91,28 +94,20 @@ h1{
 
 h2{
   font-size: 1.5em;
-  color: white;
 }
 
 h3{
   font-size: 1.2em;
-  color: white;
 }
 
 h4{
   font-size: 1.0em;
-  color: white;
 }
 
 .wrapper{
   max-width: $width;
-  border-radius: $radius;
   line-height: 150%;
   min-height: 640px;
-  border-radius: 2px;
-  background: #222;
-  color: #bbb;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
   margin: 0 auto 40px auto;
   padding: 0 20px;
   position: relative;
@@ -130,8 +125,8 @@ h4{
 
   h3{
     font-weight: normal;
-    font-size: 0.9em;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    color: #555;
   }
 
   ul + h3{
@@ -139,7 +134,7 @@ h4{
   }
 
   ul{
-    border-top: 1px solid #555;
+    border-top: 1px dotted #ccc;
   }
 
   li{
@@ -148,18 +143,24 @@ h4{
 
     a{
       display: block;
-      border-bottom: 1px solid #555;
+      border-bottom: 1px dotted #ccc;
       text-decoration: none;
-      color: #f70;
       padding: 0 5px;
       line-height: 30px;
+      color: #333;
+      font-size: 0.85em;
+    }
+
+    a:hover{
+      text-decoration: underline;
+      background: $orange;
     }
   }
 }
 
 section.content{
-  margin: 20px 0 0 140px;
-  padding: 1px 0;
+  margin: 0 0 0 140px;
+  padding: 24px 0 0 1px;
   min-height: 800px;
 
   iframe{
@@ -167,7 +168,7 @@ section.content{
   }
 
   strong{
-    color: #eee;
+    color: #555;
   }
 }
 

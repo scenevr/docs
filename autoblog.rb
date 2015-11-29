@@ -3,7 +3,7 @@ require 'open-uri'
 require 'date'
 require 'htmlentities'
 
-json = JSON.parse(open('http://reddit.com/r/scenevr.json').readlines.join)
+json = JSON.parse(open('https://www.reddit.com/r/scenevr.json').readlines.join)
 
 json['data']['children'].each do |child|
   child = child['data']
