@@ -27,7 +27,7 @@ a{
   color: #333;
 
   &:hover{
-    background: $orange;
+    color: $orange;
   }
 }
 
@@ -399,5 +399,39 @@ cite{
   img{
     width: 100%;
     border-radius: 2px;
+  }
+}
+
+.downloads{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+
+  td{
+    border-top: 1px solid #ccc;
+    vertical-align: top;
+    padding: 8px;
+
+    img{
+      width: 32px;
+      padding: 8px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.8;
+    }
+  }
+
+  th{
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #777;
+  }
+
+  th:first-child{
+    text-align: left;
+    padding-left: 48px;
+  }
+  td + td {
+    text-align: center;
   }
 }

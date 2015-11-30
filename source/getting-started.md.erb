@@ -4,13 +4,51 @@ primary_navigation: false
 position: 4
 ---
 
-# Home
-
-The scene server is a node.js app and requires npm to install dependencies. You'll need to install [node](//nodejs.org) and [npm](//npmjs.org) to get started. Scene server has been tested on Windows and OS X.
-
 # Getting Started 
 
-## Installing
+To create SceneVR scenes, the easiest way is to use our [electron powered](http://electron.atom.io/) web app that includes the SceneVR viewer, editor, server and sample scenes in one installer.
+
+<table class="downloads">
+  <tr>
+    <th>Download</th>
+    <th>File size</th>
+    <th>Version</th>
+    <th>Released</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="/downloads/scenevr-<%= latest_version.number %>-setup.exe"><img src="/images/download.png" /> SceneVR for Windows</a><br />
+      <small>Windows 7, 8 and 10</small>
+    </td>
+    <td>
+      <%= nice_size(latest_version.win_size) %>
+    </td>
+    <td>
+      <%= latest_version.number %>
+    </td>
+    <td>
+      <%= latest_version.date.strftime('%d-%m-%Y') %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="/downloads/scenevr-<%= latest_version.number %>-setup.dmg"><img src="/images/download.png" /> SceneVR for Mac OS X</a><br />
+      <small>OS X 10.9+</small>
+    </td>
+    <td>
+      <%= nice_size(latest_version.osx_size) %>
+    </td>
+    <td>
+      <%= latest_version.number %>
+    </td>
+    <td>
+      <%= latest_version.date.strftime('%d-%m-%Y') %>
+    </td>
+  </tr>
+</table>
+
+## Hard mode
 
     npm install -g scenevr
 

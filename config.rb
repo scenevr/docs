@@ -79,6 +79,25 @@ page "/feed.xml", layout: false
 #   end
 # end
 
+require 'ostruct'
+
+helpers do
+  def latest_version
+    v = IO.readlines('source/downloads/LATEST').first
+
+    OpenStruct.new(
+      number: v,
+      date: File.mtime('source/downloads/LATEST'),
+      win_size: File.size("source/downloads/scenevr-#{v}-setup.exe"),
+      osx_size: File.size("source/downloads/scenevr-#{v}-setup.dmg")
+    )
+  end
+
+  def nice_size(size)
+    (size / 1024 / 1024).floor.to_s + 'mb'
+  end
+end
+
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
