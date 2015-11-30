@@ -274,7 +274,7 @@ dl{
   position: relative; 
   overflow: auto; 
   box-sizing: border-box;
-  margin: 4px;
+  margin: 4px 4px 20px 4px;
   box-shadow: 1px 1px 3px black; 
   background: #555;
   border-radius: 2px;
@@ -307,6 +307,10 @@ dl{
       background: rgba(0, 0, 0, 0.6);
       font-style: normal;
       text-shadow: 1px 1px 1px black;
+    }
+
+    cite, a{
+      color: #eee;
     }
   }
 
@@ -386,19 +390,19 @@ cite{
 }
 
 .feature{
-  box-shadow: 3px 3px 5px black;
-  border: 1px solid #888;
-  border-radius: 4px;
-  background: linear-gradient(#222, #333);
   padding: 0 8px 8px 8px;
-  margin: 10px;
-  width: 220px;
+  width: 33%;
   float: left;
   font-size: 0.85em;
 
   img{
     width: 100%;
-    border-radius: 2px;
+    padding: 4px;
+    border: 1px solid #ccc;
+  }
+
+  h2{
+    margin-bottom: 12px;
   }
 }
 
